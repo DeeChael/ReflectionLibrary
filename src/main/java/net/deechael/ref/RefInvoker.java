@@ -131,6 +131,10 @@ public final class RefInvoker {
         return UnsafeRef.invokeStatic(clazz, name, parameters);
     }
 
+    public Class<?> instanceClass() {
+        return this.clazz;
+    }
+
     public static RefInvoker ref(Object object) {
         return new RefInvoker(object);
     }
